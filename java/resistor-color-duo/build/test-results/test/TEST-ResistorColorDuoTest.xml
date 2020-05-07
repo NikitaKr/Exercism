@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ResistorColorDuoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-05-06T11:05:47" hostname="Nikitas-MacBook-Air.local" time="0.008">
+  <properties/>
+  <testcase name="testBrownAndBlack" classname="ResistorColorDuoTest" time="0.004"/>
+  <testcase name="testBlueAndGrey" classname="ResistorColorDuoTest" time="0.0"/>
+  <testcase name="testOrangeAndOrange" classname="ResistorColorDuoTest" time="0.0"/>
+  <testcase name="testYellowAndViolet" classname="ResistorColorDuoTest" time="0.0"/>
+  <testcase name="testIgnoreAdditionalColors" classname="ResistorColorDuoTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
