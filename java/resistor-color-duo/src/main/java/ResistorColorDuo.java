@@ -1,6 +1,5 @@
-import java.util.HashMap;
-
 class ResistorColorDuo {
+    
     int value(String[] colors) {
            
             String[] resCols = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};     
