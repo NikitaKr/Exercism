@@ -2,23 +2,33 @@
 
 class DnDCharacter {
 
-    private final int strength;
-    private final int dexterity;
-    private final int charisma;
-    private final int intelligence;
-    private final int wisdom;
-    private final int hitpoints;
-
-
+    private int strength;
+    private int dexterity;
+    private int charisma;
+    private int intelligence;
+    private int wisdom;
+    private int hitpoints;
+    private int constitution;
+    private final double randomNum = Math.random();
+    
     boolean getStrength = false;
     int[] arr = new int[3];
-
     int mod = 0;
+
+    public DnDCharacter() {
+        this.charisma = ability();
+        this.dexterity = ability();
+        this.intelligence = ability();
+        this.strength = ability();
+        this.wisdom = ability();
+        this.constitution = ability();
+        this.hitpoints = 10 + modifier(this.constitution);
+    }
 
     int ability() {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int)(Math.random() * (6 - 1) + 1) + 1;
+            arr[i] = (int)(this.randomNum * (6 - 1) + 1) + 1;
         }
         for (int num : arr) {
             sum = sum + num;
@@ -29,37 +39,36 @@ class DnDCharacter {
     int modifier(int input) {
         double result = ((double) input - 10.0) / 2.0;
         result = Math.floor(result);
-        
         mod = (int) result;
         return (int) result;
     }
   
-    int getStrength() {
-       return ability();       
+    final int getStrength() {
+       return this.strength;   
     }
 
     final int getDexterity() {
-        return ability();
+        return this.dexterity;
     }
 
     final int getConstitution() {
-        return ability();
+        return this.constitution;
     }
 
     final int getIntelligence() {
-        return ability();
+        return this.intelligence;
     }
 
     final int getWisdom() {
-        return ability();
+        return this.wisdom;
     }
 
     final int getCharisma() {
-        return ability();
+        return this.charisma;
     }
 
     final int getHitpoints() {
-        return 10 + mod;
+        return this.hitpoints;
     }
 
 
