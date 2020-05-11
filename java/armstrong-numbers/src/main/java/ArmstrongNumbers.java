@@ -9,16 +9,16 @@ class ArmstrongNumbers {
 
        char[] digits = num.toCharArray();
 
-       int number = 0;
+       double number = 0;
+       double sum = 0;
 
        for (int i = 0; i < digits.length; i++) {
-           number = (int) Math.pow(digits[i], power);
-           if(i > 0) {
-               number += number;
-           }
+            number = Math.pow(Integer.parseInt(String.valueOf(digits[i])), power);
+            sum = sum + number;
+           
        }
 
-       if (number == numberToCheck) {
+       if ((int) sum == numberToCheck) {
            isArmstrongNumber = true;
        }
 
