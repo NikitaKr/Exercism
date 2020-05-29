@@ -10,7 +10,6 @@ enum Signal  {
     private final int binaryCode;
 
     Signal(final int binaryCode) {
-
         this.binaryCode = binaryCode;
     }
 
