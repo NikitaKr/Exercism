@@ -1,0 +1,7 @@
+
+*.prefs
+*.bin
+*.lock
+*.bin
+*.properties
+.DS_Store
