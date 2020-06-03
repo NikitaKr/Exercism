@@ -1,36 +1,30 @@
-import java.util.stream.IntStream;
+public class Main {
 
-class MicroBlog {
+    public static void main(String[] args) {
 
-    String truncatedString = "";
-    int len = 0;
+        String input = "🤧🤒";
+        String truncatedString = "";
 
-    public String truncate(String input) {
-
-        len = input.length();
-
-        for (int i = 0; i < len; i++) {
-            if (Character.isSurrogatePair(input.charAt(i), input.charAt(i))) {
-                if (i <= len) {
+        for (int i = 0; i < input.length(); i++) {
+            if(Character.isSurrogatePair(input.charAt(i), input.charAt(i))) {
+                if(i <= 4) {
                     int charCodePoint = input.codePointAt(i);
                     char emoji[] = {
+
                             Character.highSurrogate(charCodePoint),
                             Character.lowSurrogate(charCodePoint)
                     };
 
                     truncatedString += String.valueOf(emoji);
-                    len = len + 10;
                 }
 
             } else {
                 if (i <= 4) {
                     truncatedString = truncatedString.concat(String.valueOf(input.charAt(i)));
                 }
-
-
             }
         }
+        System.out.println(truncatedString);
 
-        return truncatedString;
     }
 }
